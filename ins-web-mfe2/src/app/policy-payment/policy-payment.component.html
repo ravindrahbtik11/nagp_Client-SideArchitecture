@@ -1,0 +1,25 @@
+
+<div class="payment-section">
+
+<div class="row">
+    <h3 class="header">Do payment for below Policies</h3>
+    <div class="col-md-12 dropdown">
+       
+        <p>
+            <select class="dropdown-content" (change)="changePolicy($event)"  [(ngModel)]="selectedValue">
+                <option  value="">Select Policy to Pay</option>
+                <option  *ngFor="let item of policies" [value]="item['policyNumber']">{{item['policyNumber']}}</option>
+            </select>
+        </p>
+      
+    </div>
+</div>
+<div class="row" *ngIf="selectedPolicyDetail && selectedValue">
+    <div class="col-md-12 input-field">
+      
+      <div class="amount"> {{selectedPolicyDetail.amount}}</div> 
+      <div class="btn-payment">  <button class="btn-primary" (click)="updatePolicy(selectedPolicyDetail.policyNumber)">Pay Policy</button></div> 
+    </div>
+</div>
+
+</div>
