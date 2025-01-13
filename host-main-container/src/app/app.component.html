@@ -1,0 +1,25 @@
+
+
+
+<main class="main">
+ 
+  <div class="content">
+    <ul>
+
+      <li class="{{title ==='Home' ? 'active':''}}"><a routerLink="/" (click)="title='Home'" >Home</a></li>
+      <li class="{{title ==='Web MFE1' ? 'active':''}}"><a routerLink="/mfe1"  (click)="title='Web MFE1'">Web MFE1</a></li>
+      <li class="{{title ==='Web MFE2' ? 'active':''}}"><a routerLink="/mfe2"  (click)="title='Web MFE2'">Web MFE2</a></li>
+    </ul>
+    
+  </div>
+</main>
+
+<h1>{{title}}</h1>
+<div class="right">
+  <div class="link"><a href="javaScript:0" (click)="startWorker()">Start Web Worker</a></div>
+  <div class="inc-number">{{value}}</div>
+</div>
+
+<hr>
+
+<router-outlet></router-outlet>
