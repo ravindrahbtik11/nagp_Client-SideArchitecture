@@ -1,3 +1,6 @@
+
+Asumption: Angular cli and all prerequisit installed on the system. Then follow below steps to run the applications
+
 1. Open code in VS code or open CMD prompt at root of each application (host-main-container, ins-web-mfe1, and ins-web-mfe2).
 2. Run 'npm install' command for all application (host-main-container, ins-web-mfe1, and ins-web-mfe2).
 3. After installing the dependencies run below command.
