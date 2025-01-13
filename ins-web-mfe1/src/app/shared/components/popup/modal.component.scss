@@ -1,0 +1,35 @@
+
+$primeTheame: #009999;
+$header-color:#fff;
+$SecondaryTheame:#dddddd;
+.btn-primary{
+    background-color: $primeTheame;
+    color: $header-color;
+    margin: 1rem;
+    margin-left: 0px;
+    padding-left: 0px;
+    padding: .8rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: .5rem;
+  }
+  .btn-default{
+    background-color: $SecondaryTheame;
+    color: #000;
+    margin: 1rem;
+    margin-left: 0px;
+    padding-left: 0px;
+    padding: .8rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: .5rem;
+  }
+  .input-field{
+    margin: 1rem;
+  }
+  input{
+    color: #000;
+
+  }

@@ -1,0 +1,24 @@
+<h2 mat-dialog-title>Add User</h2>
+<mat-dialog-content>
+  <mat-form-field class="input-field">
+    <mat-label>Policy Number</mat-label>
+    <input matInput disabled readonly="readonly" [(ngModel)]="data.policyNumber" />
+  </mat-form-field>
+  <mat-form-field class="input-field">
+    <mat-label>Policy Holder Name</mat-label>
+    <input matInput [(ngModel)]="data.policyHolderName" />
+  </mat-form-field>
+  <mat-form-field class="input-field">
+    <mat-label>Policy Holder Email </mat-label>
+    <input matInput [(ngModel)]="data.policyHolderEmail" />
+  </mat-form-field>
+  <mat-form-field class="input-field">
+    <mat-label>Amount</mat-label>
+    <input matInput [(ngModel)]="data.amount" />
+  </mat-form-field>
+  
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button (click)="onCancelClick()" class="btn-default">Cancel</button>
+  <button [mat-dialog-close]="animal()" cdkFocusInitial class="btn-primary" (click)="onSaveClick()">Save</button>
+</mat-dialog-actions>
