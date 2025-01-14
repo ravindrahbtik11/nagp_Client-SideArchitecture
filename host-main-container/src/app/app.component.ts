@@ -4,20 +4,19 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,RouterLink,CommonModule],
+  imports: [RouterOutlet, RouterLink, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit {
   title = 'Home';
-  value:any='';
-  ngOnInit(){
+  value: any = '';
+  ngOnInit() {
   }
 
-  
-  startWorker(){
+
+  startWorker() {
     if (typeof Worker !== 'undefined') {
-      debugger
       const worker = new Worker(new URL('./main.worker', import.meta.url));
       worker.onmessage = ({ data }) => {
         this.value = data;
@@ -28,5 +27,5 @@ export class AppComponent implements OnInit {
       console.log('Web workers are not supported in this environment.');
     }
   }
-  
+
 }
